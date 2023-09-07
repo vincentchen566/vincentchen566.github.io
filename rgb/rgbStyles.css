@@ -1,0 +1,369 @@
+/*colors:
+	light sage green: rgb(221,230,213);
+	light salmon: rgb(252,238,233);
+	dark salmon:rgb(233,150,122)
+*/
+
+
+html{
+	background-color:rgb(221,230,213);
+}
+/* header */
+#top a:link{
+	text-decoration:none;
+	color:black;
+}
+#top a:visited{
+	text-decoration:none;
+	color:black;
+}
+h1 {
+	
+	margin-top: 0px;
+	text-align: center;
+	font-family: "JetBrains Mono", monospace;
+	font-size:50px;
+}
+
+body{
+	padding:0px;
+	margin:0px 0px;
+}
+#top{
+	background-color:rgb(221,230,213);
+	width:100%;
+	padding: 20px 0;
+	text-align: center;
+	
+}
+#main{
+	background-color: rgb(252,238,233);
+	width:100%;
+	height:fit-content;	
+	margin-bottom:0px;
+	padding-bottom:30px;
+	text-align:center;
+	padding-top:20px;
+}
+
+/* footer */
+	
+footer{
+	background-color: rgb(221,230,213);
+	width:100%;
+	
+}
+.icon{
+	display:inline-block;
+	vertical-align:middle;
+	height:25px;
+	width:25px;
+	
+}
+.iconDiv{
+
+	padding-left:50px;
+	margin-top:5px;
+	margin-bottom:5px;
+
+	
+}
+.iconText{
+	display:inline;
+	text-align:center;
+	margin-top:auto;
+	padding-bottom:3px;
+	vertical-align:middle;
+}
+footer p{
+	font-family: "JetBrains Mono", monospace;
+}
+footer a:link{
+	color:black;
+	text-decoration:none;
+}
+footer a:hover{
+	color:white;
+}
+footer a:visited{
+	color:black;
+}
+hr {
+	color: black;
+	padding:0px;
+	margin:0px;
+}
+
+
+/* main and large containers */
+
+p{
+	font-family:"JetBrains Mono",monospace;
+}
+
+#rgbmain{
+	position:relative;
+	display:inline-block;
+	/*background-color:black;*/
+	width:fit-content;
+}
+
+#middle{
+	display:inline-block;
+	width:fit-content;
+	margin-left:10px;
+	margin-right:10px;
+	padding:0px;
+	
+}
+
+#right{
+	vertical-align:top;
+	display:inline-block;
+	/*background-color:green;*/
+	width:fit-content;
+	padding:0px;
+}
+
+#left {
+	vertical-align:top;
+	position: relative;
+	display: inline-block;
+	margin-left: 10px;
+	width:fit-content;
+	
+}
+
+/*stats and help buttons*/
+
+#buttonBarTop {
+	margin-left: 70%;
+}
+
+
+#stats, #help {
+	height:50px;
+	width:50px;
+	display:inline-block;
+}
+
+#stats img, #help img{
+	margin:0px;
+	height:50px;
+	width:50px;
+	/* rgb(233,150,122)*/
+}
+
+#stats img:hover, #help img:hover{
+	cursor:pointer;
+}
+
+#help {
+	margin-left:10px;
+	
+}
+
+
+#grayout {
+	position:fixed;
+	left:0px;
+	top:0px;
+	height:100%;
+	width:100%;
+	background-color:black;
+	opacity:0.5;
+	z-index: 9999;
+}
+
+
+#helpPage, #statsPage {
+	position: fixed;
+	height: 500px;
+	width: 500px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgb(252,238,233);
+	z-index: 10000;
+}
+
+.backButton{
+	margin-left:80%;
+}
+
+
+/*Hex and % info*/
+
+#info{
+	top:0px;
+	vertical-align:top;
+	
+	
+	border-color:black;
+	border-width:2px;
+	border-style:solid;
+	text-align:left;
+	padding:10px;
+}
+
+
+/*color bar and box*/
+#selector{
+	display:inline;
+	/*float:left;*/
+	margin-left:0px;
+}
+
+#colorBar {
+	display:inline-block;
+	height: 300px;
+	width: 25px;
+	border-width: 2px;
+	border-color: black;
+	border-style: solid;
+}
+
+#colorBox{
+	margin-left:10px;
+	display:inline-block;
+	height:300px;
+	width:300px;
+	border-width:2px;
+	border-color:black;
+	border-style:solid;
+}
+
+
+
+/*random color, play, and guess buttons*/
+
+#buttonBarBot {
+	margin: auto;
+	margin-top: 20px;
+	display: block;
+	height: 50px;
+	width: fit-content;
+}
+
+.buttonDiv {
+	background-color: rgb(233,150,122);
+	padding:10px;
+	text-align:center;
+	display:inline-block;
+	
+}
+
+.buttonDiv:hover{
+	cursor:pointer;
+}
+
+.buttonBar p{
+	color:white;
+	padding:0;
+	margin:0px;
+}
+
+#lucky, #play{
+	margin-right:10px;
+}
+
+#guess, #explore, #restart{
+	display:none;
+
+}
+
+
+#guess, #restart {
+	margin-right: 10px;
+}
+
+
+/*rgb selector*/
+#rgb{
+	height:100px;
+	width:fit-content;
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+
+.letterDiv{
+	height:100px;
+	width:100px;
+	margin:0px;
+	border:0px;
+	padding:0px;
+	display:inline-block;
+}
+
+#rgb p{
+	color:white;
+	font-size:20px;
+	font-weight:bold;
+}
+
+#r{
+	background-color:red;
+}
+#b{
+	background-color:blue;
+}
+#g{
+	background-color:green;
+}
+
+.rgbInput{
+	width:30px;
+	font-family:"JetBrains Mono",monospace;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+
+
+/*guess history*/
+
+#history{
+	width:100%;
+	height:fit-content;
+	margin-top:10px;
+	border-width:2px;
+	border-style:solid;
+	border-color:black;
+}
+
+#history h2{
+	font-family:"JetBrains Mono", monospace;
+}
+
+
+.statsPage h2 {
+	font-family: "JetBrains Mono", monospace;
+}
+
+
+.historyItem p{
+	display:inline-block;
+	margin:auto;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:20px;
+	
+}
+.historyBox{
+	height:20px;
+	width:20px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-bottom:4px;
+}
+

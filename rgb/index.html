@@ -1,0 +1,133 @@
+<!--TODO-->
+<!--add back color bar and visual way to change RGB-->
+<!--find way to sanitize and immediately process input-->
+<!--content for ? and stats-->
+<!--add way to restart game-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>vincentchen566.github.io</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/rgb/rgbStyles.css">
+		<script src="/rgb/rgbScript.js"></script>
+
+	</head>
+	
+
+	<body onload="onload()">
+
+		<div id="top">
+			<a id="homeLink" href="/index.html"><h1>vincentchen566.github.io</h1></a>
+		</div>
+
+		<hr>
+
+		<div id="main">
+			
+			<!--for grayout animation-->
+			<div id="grayout" style="display: none;"></div>
+
+			<!--pages to display on button click-->
+			<div id="statsPage" style="display: none;">
+				<img class="backButton" onclick="back('#statsPage')" src="x.png" alt="x">
+				<div class="statDisplay" id="avgGuessStat">
+					<h2 style="font-family: 'JetBrains Mono', monospace;">Average guess per game:</h2>
+					<h2 style="font-family: 'JetBrains Mono', monospace;" id="avgGuess"></h2>
+				</div>
+				<div class="statDisplay" id="gameStat">
+					<h2 style="font-family: 'JetBrains Mono', monospace;">Games played:</h2>
+					<h2 style="font-family: 'JetBrains Mono', monospace;" id="gamesPlayed"></h2>
+				</div>
+			</div>
+
+			<div id="helpPage" style="display: none">
+				<img class="backButton" onclick="back('#helpPage')" src="x.png" alt="x">
+				<p>Coming soon!</p>
+			</div>
+
+			<!--help and stats buttons-->
+			<div id="buttonBarTop" class="buttonBar">
+				<div id="stats"> <img src="stats.png" alt="stats" onclick="displayStats()"> </div>
+				<div id="help"> <img src="help.png" alt="help" onclick="displayHelp()"></div>
+			</div>
+
+			<div id="rgbmain">
+			<!--Hex and % info-->
+				<div id="left">
+					<div id="info">
+						<p id="hexValue">a</p>
+						<p id="hslValue"></p>
+					</div>
+				</div>
+			
+				<div id="middle">
+
+					<!--box and bar for selecting visually-->
+					<div id="selector">
+
+						<!--ADD LATER-->
+
+						<!--<div id="colorBar"></div>-->
+						<div id="colorBox"></div>
+					</div>
+
+				
+
+					<!--buttons under selector box-->
+					<div id="buttonBarBot" class="buttonBar">
+						<div id="lucky" class="buttonDiv" onclick="randColorExplore()"><p>Random</p> </div>
+						<div id="play" class="buttonDiv" onclick="modeToggle()"> <p>Play!</p></div>
+						<div id="save" class="buttonDiv" onclick="save()"><p>Save</p></div>
+						<div id="guess" class="buttonDiv" onclick="checkGuess()"> <p>Guess!</p></div>
+						<div id="restart" class="buttonDiv" onclick="gameStart()"><p>Restart</p></div>
+						<div id="explore" class="buttonDiv" onclick="modeToggle()"> <p>Back</p></div>
+					</div>
+
+					<div id="congrats"><p id="congratsMessage"></p></div>
+
+				</div>
+			
+				<div id="right">
+					<div id="rgb">
+						<div class="letterDiv" id="r"><p>R</p> <input class="rgbInput" id="rInput" value="255" onchange="updateValue()"/></div>
+						<div class="letterDiv" id="g"><p>G</p> <input class="rgbInput" id="gInput" value="255" onchange="updateValue()"/></div>
+						<div class="letterDiv" id="b"><p>B</p> <input class="rgbInput" id="bInput" value="255" onchange="updateValue()"/></div>
+					</div>
+					<div id="history"> <h2 id="historyTitle">History</h2></div>
+				</div>
+
+
+			</div>
+		</div>
+		<hr>
+
+
+		<footer>
+			<div class="iconDiv">
+				<img src="/icons/mail.png" alt="email" class="icon">
+				<a href="mailto:vincentchen566@gmail.com"><p class="iconText">vincentchen566@gmail.com</p></a>
+			</div>
+
+			<div class="iconDiv">
+				<img src="/icons/resume.png" alt="resume" class="icon">
+				<a href="/resume.doc"> <p class="iconText">Resume</p></a>
+			</div>
+
+			<div class="iconDiv">
+				<img src="/icons/social.png" alt="links" class="icon">
+				<p class="iconText">Social Media: coming soon!</p>
+			</div>
+			<!--
+		<div class="iconDiv">
+			<img src="placeholder.png" alt="money" class="icon">
+			<p class="iconText">Support me! </p>
+		</div> -->
+		</footer>
+	</body>
+</html>
