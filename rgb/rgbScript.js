@@ -219,7 +219,6 @@ function gameStart() {
 	secretR = Math.floor(Math.random() * 256);
 	secretG = Math.floor(Math.random() * 256);
 	secretB = Math.floor(Math.random() * 256);
-	secretR = 100; secretG = 100; secretB = 100;
 	$("#colorBox").css("background-color", "rgb(" + secretR + "," + secretG + "," + secretB + ")");
 	$("#guess").css("display", "inline-block");
 	$("#congratsMessage").text("");
