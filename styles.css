@@ -76,13 +76,26 @@ footer{
 }
 
 .itemRow{
+	height:150px;
+	width:fit-content;
 	padding-top:50px;
 
 }
 
 
+.itemLeft{
+	display:inline-block;
+	height:150px;
+	width:300px;
+	margin-left:100px;
+}
+
 .itemMiddle {
-	display: block;
+	position:relative;
+	top:0px;
+	left:50%;
+	transform:translateX(-50%);
+	display: inline-block;
 	margin-left:auto;
 	margin-right:auto;
 
@@ -93,7 +106,7 @@ footer{
 
 
 .thumbnail{
-	display:block;
+	display:inline-block;
 	height:150px;
 	width:300px;
 	margin-left:auto;
