@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>vincentchen566.github.io</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/affirmations/affirmationStyle.css">
+
+  
+
+</head>
+
+
+<body>
+
+    <div id="top">
+        <a id="homeLink" href="/index.html"><h1>vincentchen566.github.io</h1></a>
+    </div>
+    <hr>
+    <div id="main">
+
+
+        <div class="buttonDiv" id="claimButton"><p>Claim your daily affirmation!</p></div>
+        <div class="buttonDiv" id="uploadButton"><p>Upload an affirmation for somebody else!</p></div>
+
+        <div class="popUpDiv" id="affirmationDisplay">
+            <div id="affirmationBody"><p id="affirmationMessage"></p></div>
+            <div id="affirmationFooter"><p id="claimedNumber"></p></div>
+        </div>
+
+        <div class="popUpDiv" id="affirmationPromptDisplay">
+            <div id="pleaseEnter"><p id="pleaseEnterMessage">Please enter an affirmation:</p>
+            <input id="affirmationInput" placeholder="Enter your affirmation here:"/>
+            <div class="buttonDiv" id="submitButton"><p>Submit</p></div>
+            </div>
+        </div>
+
+        <div id="grayout"></div>
+
+    </div>
+    <hr>
+    <footer>
+        <div class="iconDiv">
+            <img src="/icons/mail.png" alt="email" class="icon">
+            <a href="mailto:vincentchen566@gmail.com"><p class="iconText">vincentchen566@gmail.com</p></a>
+        </div>
+
+        <div class="iconDiv">
+            <img src="/icons/resume.png" alt="resume" class="icon">
+            <a href="/resume.doc"> <p class="iconText">Resume</p></a>
+        </div>
+
+        <div class="iconDiv">
+            <img src="/icons/social.png" alt="links" class="icon">
+            <p class="iconText">Social Media: coming soon!</p>
+        </div>
+        <!--
+        <div class="iconDiv">
+            <img src="placeholder.png" alt="money" class="icon">
+            <p class="iconText">Support me! </p>
+        </div> -->
+    </footer>
+
+
+    <script type="module" src="/affirmations/databaseModule.js"></script>
+</body>
+
+
+
+</html>

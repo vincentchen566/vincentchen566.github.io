@@ -1,0 +1,171 @@
+﻿/*template css*/
+html {
+    background-color: rgb(221,230,213);
+}
+#top a:link {
+    text-decoration: none;
+    color: black;
+}
+#top a:visited {
+    text-decoration: none;
+    color: black;
+}
+h1 {
+    margin-top: 0px;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 50px;
+}
+body {
+    padding: 0px;
+    margin: 0px 0px;
+}
+#top {
+    background-color: rgb(221,230,213);
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+#main {
+    background-color: rgb(252,238,233);
+    width: 100%;
+    height: 400px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+    padding-top: 20px;
+}
+footer {
+    background-color: rgb(221,230,213);
+    width: 100%;
+}
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+    width: 25px;
+}
+.iconDiv {
+    padding-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.iconText {
+    display: inline;
+    text-align: center;
+    margin-top: auto;
+    padding-bottom: 3px;
+    vertical-align: middle;
+}
+footer p {
+    font-family: "JetBrains Mono", monospace;
+}
+footer a:link {
+    color: black;
+    text-decoration: none;
+}
+footer a:hover {
+    color: white;
+}
+footer a:visited {
+    color: black;
+}
+hr {
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+p{font-family:"JetBrains Mono", monospace;}
+
+/*button div*/
+.buttonDiv {
+    margin:auto;
+    background-color: rgb(233,150,122);
+    padding: 10px;
+    text-align: center;
+    display: block;
+    width:fit-content;
+}
+
+.buttonDiv:hover{
+    cursor:pointer;
+}
+
+#claimButton{
+    margin-top:100px;
+}
+
+.wait:hover{
+    cursor: not-allowed;
+}
+
+#uploadButton{
+    margin-top:30px;
+}
+
+.buttonBar p {
+    color: white;
+    padding: 0;
+    margin: 0px;
+}
+
+/*pop up div*/
+
+.popUpDiv{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    margin:0px;
+    display:none;
+    width:600px;
+    height:500px;
+    z-index:10000;
+    background-color:white;
+    border-radius:15px;
+}
+
+
+#grayout {
+    display:none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 9999;
+}
+
+
+#affirmationFooter {
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+    position: absolute;
+    background-color: rgb(173,216,230);
+    height: 50px;
+    margin: 0px;
+    bottom: 0px;
+    width:100%;
+}
+
+#affirmationMessage{
+    margin-top:30%;
+}
+
+#pleaseEnter{
+    margin-top:50px;
+}
+
+#affirmationInput {
+    width: 80%;
+    height: 30px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+}
+
+#submitButton{
+    margin-top:50px;
+}

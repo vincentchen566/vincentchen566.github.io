@@ -84,20 +84,35 @@ footer{
 
 
 .itemLeft{
+	position:absolute;
+	display:inline-block;
+	margin-left:100px;
+	height:150px;
+	width:300px;
+
+	
+}
+
+.itemRight{
+	position:absolute;
+	right:100px;
 	display:inline-block;
 	height:150px;
 	width:300px;
-	margin-left:100px;
+
 }
 
-.itemMiddle {
+.itemMiddle {/*
 	position:relative;
 	top:0px;
 	left:50%;
 	transform:translateX(-50%);
+				 */
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
 	display: inline-block;
-	margin-left:auto;
-	margin-right:auto;
+
 
 	height:150px;
 	width:300px;
@@ -139,15 +154,13 @@ footer a:link{
 	text-decoration:none;
 }
 
-footer a:visited {
-	color: black;
-}
-
 footer a:hover{
 	color:white;
 }
 
-
+footer a:visited{
+	color:black;
+}
 
 hr {
 	color: black;
