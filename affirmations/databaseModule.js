@@ -39,17 +39,7 @@ var submitAvailable = false;
 
 
 //onload
-
-
-let testRef = ref(database, "affirmations/-Ndq4JQAxOQosKb8NvQf")
-get(testRef).then((snapshot) => {
-    let currentLikes = snapshot.val().claimed;
-    currentLikes += 1;
-    set(ref(database, "affirmations/-Ndq4JQAxOQosKb8NvQf/claimed"), currentLikes);
-})
-
 lastAffirmDate = getCookie("affirmDate");
-
 //checking if claiming affirmation available
 if (lastAffirmDate == null) {
     affirmAvailable = true;
@@ -105,7 +95,7 @@ if (!submitAvailable) {
 //onclick functions for buttons
 //gets random affirmation  + claims, increments # claims by 1, and passes to display affirmation function
 function claimOnclick() {
-    document.cookie = "affirmDate=" + currentDate;
+    setCookie("affirmDate", currentDate);
     let index = Math.floor(Math.random() * affList.length);
     let claimedRef = ref(database, "affirmations/" + keyList[index]);
     let currentLikes;
@@ -146,8 +136,8 @@ function closeSubmit() {
 function submitAffirmationOnclick() {
     let message = $("#affirmationInput").val();
     proposeAffirmation(message);
-
-    document.cookie = "submitDate=" + new Date();
+    let d = new Date();
+    setCookie("submitDate", d);
     $("#uploadButton").html("<p>You already uploaded an affirmation today</p>");
     $("#uploadButton").addClass("wait");
     $("#uploadButton").off();
@@ -199,3 +189,10 @@ function getCookie(name) {
     return decodeURI(dc.substring(begin + prefix.length, end));
 }
 
+
+function setCookie(cookieName, cookieValue) {
+    const d = new Date();
+    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+}

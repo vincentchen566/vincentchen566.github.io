@@ -18,8 +18,8 @@ function onload() {
 	if (myCookie == null) {
 		totalGames = 0;
 		totalGuesses = 0;
-		document.cookie = "totalGames=0";
-		document.cookie = "totalGuesses=0";
+		setCookie("totalGames", "0");
+		setCookie("totalGuesses", "0");
 	}
 	else {
 
@@ -54,6 +54,13 @@ function getCookie(name) {
 	return decodeURI(dc.substring(begin + prefix.length, end));
 }
 
+//set cookie
+function setCookie(cookieName, cookieValue) {
+	const d = new Date();
+	d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+	let expires = "expires=" + d.toUTCString();
+	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+}
 
 
 
@@ -226,7 +233,7 @@ function gameStart() {
 	clearHistory();
 }
 
-/*INCOMPLETE - check guess*/
+//check guess
 function checkGuess() {
 	/*check validity of input*/
 	let guessR = $("#rInput").val();
@@ -237,8 +244,8 @@ function checkGuess() {
 		$("#guess").css("display", "none");
 		totalGuesses = parseInt(totalGuesses) + guesses;
 		totalGames = parseInt(totalGames) + 1;
-		document.cookie = "totalGames=" + totalGames;
-		document.cookie = "totalGuesses =" + totalGuesses;	
+		setCookie("totalGames", totalGames);
+		setCookie("totalGuesses", totalGuesses);	
 
 		if (guesses == 1){
 			$("#congratsMessage").text("Congrats! You got it in	1 guess.");
